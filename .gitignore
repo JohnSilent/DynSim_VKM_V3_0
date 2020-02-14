@@ -1,0 +1,4 @@
+*.bat
+*.pyc
+boost_python-vc140-mt-1_61.dll
+powerfactory.pyd
