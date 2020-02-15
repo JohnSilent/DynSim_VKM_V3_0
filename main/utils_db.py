@@ -36,7 +36,7 @@ def read_project_attributes_from_moebase(projektnummer=None, shortnames=None):
     
     projektnummer = " ".join([projektnummer, "AZ"])
     # Datenbankzugriff auf MOEbase/moeProduction
-    engine = db.create_engine('postgresql://moe_reports:Uf8mai3Eiqu4@192.168.47.229:5432/moeProduction', echo=False)
+    engine = db.create_engine('postgresql://<INSERT_USER>:<INSERT_PASSWORD@<INSERT_IP>', echo=False)
     metadata = db.MetaData()
     ta_project = db.Table('project', metadata, autoload=True, autoload_with=engine)
     ta_add = db.Table('additionalattribute', metadata, autoload=True, autoload_with=engine)
